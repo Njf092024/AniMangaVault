@@ -50,5 +50,6 @@ class Program
         AnsiConsole.MarkupLine("[bold yellow]Add a new Anime/Manga[/]");
         string title = AnsiConsole.Ask<string>("Enter the title: ");
         string type = AnsiConsole.Ask<string>("Enter type (Anime/Manga): ");
+        string description = AnsiConsole.Ask<string>("Enter description: ");
     }
 }
