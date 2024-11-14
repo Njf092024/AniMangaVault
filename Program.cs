@@ -43,4 +43,9 @@ class Program
             }
         }
     }
+
+    static void AddNewAnimeMangaItems(AnimeMangaService service, ref int idCounter)
+    {
+        
+    }
 }
