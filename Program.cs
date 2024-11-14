@@ -22,6 +22,25 @@ class Program
             .AddChoices("Add new Anime/Manga", "List all Anime/Manga", "Update Rating", "Delete Anime/Manga", "Exit");
 
             var selectedOption = AnsiConsole.Prompt(prompt);
+
+            switch (selectedOption)
+            {
+                case "Add New Anime/Manga":
+                AddNewAnimeMangaItems(service, ref idCounter);
+                break;
+                case "List All Anime/Manga":
+                ListAnimeMangaItems(service, ref idCounter);
+                break;
+                case "Update Rating":
+                UpdateAnimeMangaRating(service, ref idCounter);
+                break;
+                case "Delete Anime/Manga":
+                DeleteAnimeMangaItem(service, ref idCounter);
+                break;
+                case "Exit":
+                exit = true;
+                break;
+            }
         }
     }
 }
