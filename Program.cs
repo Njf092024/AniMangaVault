@@ -1,5 +1,6 @@
 ﻿namespace AniMangaVault;
 using System;
+using static System.Console;
 
 class Program
 {
