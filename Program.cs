@@ -53,5 +53,17 @@ class Program
         string description = AnsiConsole.Ask<string>("Enter description: ");
         int rating = AnsiConsole.ask<string>("Enter rating (1-6): ");
         string notes = AnsiConsole.ask<string>(" Enter notes: ");
+
+        var newItem = new AnimeMangaItem
+        {
+            Id = idCounter++,
+            Title = title,
+            Type = type,
+            Description = description,
+            Rating = rating,
+            Notes = notes, 
+        };
+
+        
     }
 }
