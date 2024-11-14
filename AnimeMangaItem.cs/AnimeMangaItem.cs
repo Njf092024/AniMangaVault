@@ -6,4 +6,5 @@ public class AnimeMangaItem
     public string Description { get; set; }
     public int Rating { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.Now;
+    public string Notes { get; set; }
 }
