@@ -46,6 +46,8 @@ class Program
 
     static void AddNewAnimeMangaItems(AnimeMangaService service, ref int idCounter)
     {
-        
+        Console.Clear();
+        AnsiConsole.MarkupLine("[bold yellow]Add a new Anime/Manga[/]");
+        string title = AnsiConsole.Ask<string>("Enter the title: ");
     }
 }
