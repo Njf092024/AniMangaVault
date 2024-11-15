@@ -90,6 +90,9 @@ class Program
         int newRating = AnsiConsole.Ask<int>("Enter the new rating (1-6): ");
 
         service.UpdateRating(id, newRating);
+        AnsiConsole.MarkupLine("[green]Rating updated successfully![/]");
+        AnsiConsole.MarkupLine("Press any key to return to the main menu...");
+        Console.ReadKey();
 
     }
 
