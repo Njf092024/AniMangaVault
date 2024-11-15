@@ -82,5 +82,12 @@ class Program
     }
 
     static void UpdateAnimeMangaRating(AnimeMangaService service)
-    
+    {
+        Console.Clear();
+        AnsiConsole.MarkupLine("[bold yellow]Update Rating[/]");
+
+        int id = AnsiConsole.Ask<int>("Enter the ID of the item to update: ");
+        
+    }
+
 }
