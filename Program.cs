@@ -96,6 +96,12 @@ class Program
     }
 
     static void DeleteAnimeMangaItem(AnimeMangaService service)
-    
+    {
+        Console.Clear();
+        AnsiConsole.MarkupLine("[bold red]Delete Anime/Manga[/]");
+        int id = AnsiConsole.Ask<int>("Enter the ID of the item to delete: ");
+        service.DeleteAnimeMangaItem(id);
+    }
+
 
 }
