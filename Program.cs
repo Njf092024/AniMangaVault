@@ -89,7 +89,7 @@ class Program
         int id = AnsiConsole.Ask<int>("Enter the ID of the item to update: ");
         int newRating = AnsiConsole.Ask<int>("Enter the new rating (1-6): ");
 
-        
+        service.UpdateRating(id, newRating);
 
     }
 
