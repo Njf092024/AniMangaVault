@@ -72,4 +72,10 @@ class Program
     }
 
     static void ListAnimeMangaItems(AnimeMangaService service)
+    {
+        Console.Clear();
+        AnsiConsole.MarkupLine("[bold cyan]List of Anime/Manga:[/]");
+
+       
+    }
 }
