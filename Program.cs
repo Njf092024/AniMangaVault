@@ -80,4 +80,7 @@ class Program
         AnsiConsole.MarkupLine("Press any key to return to the main menu...");
         Console.ReadKey();
     }
+
+    static void UpdateAnimeMangaRating(AnimeMangaService service)
+    
 }
