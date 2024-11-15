@@ -87,7 +87,10 @@ class Program
         AnsiConsole.MarkupLine("[bold yellow]Update Rating[/]");
 
         int id = AnsiConsole.Ask<int>("Enter the ID of the item to update: ");
+        int newRating = AnsiConsole.Ask<int>("Enter the new rating (1-6): ");
+
         
+
     }
 
 }
