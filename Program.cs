@@ -76,6 +76,8 @@ class Program
         Console.Clear();
         AnsiConsole.MarkupLine("[bold cyan]List of Anime/Manga:[/]");
 
-       
+        service.ListAnimeMangaItems();
+        AnsiConsole.MarkupLine("Press any key to return to the main menu...");
+        Console.ReadKey();
     }
 }
