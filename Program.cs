@@ -101,6 +101,10 @@ class Program
         AnsiConsole.MarkupLine("[bold red]Delete Anime/Manga[/]");
         int id = AnsiConsole.Ask<int>("Enter the ID of the item to delete: ");
         service.DeleteAnimeMangaItem(id);
+
+        AnsiConsole.MarkupLine("[green]Item deleted successfully![/]");
+        AnsiConsole.MarkupLine("Press any key to return to the main menu...");
+        Console.Readkey();
     }
 
 
