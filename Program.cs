@@ -104,6 +104,7 @@ class Program
 
         AnsiConsole.MarkupLine("[green]Item deleted successfully![/]");
         AnsiConsole.MarkupLine("Press any key to return to the main menu...");
+        AnsiConsole.MarkupLine("...");
         Console.Readkey();
     }
 }
