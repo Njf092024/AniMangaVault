@@ -4,6 +4,10 @@ using static System.Console;
 using System.Collections.Generic;
 using System.Linq;
 using Spectre.Console;
+using AniMangaVault;
+using AniMangaVault.Services;
+using AniMangaVault.Models;
+
 
 
 class Program
@@ -65,7 +69,7 @@ class Program
             Notes = notes, 
         };
 
-        service.AddAnimeMangaItem(newItem);
+        service.AddNewAnimeMangaItem(newItem);
 
         AnsiConsole.MarkupLine("[Green]Anime/Manga added sucessfully![/]");
         AnsiConsole.MarkupLine("Press any key to return to the main menu...");

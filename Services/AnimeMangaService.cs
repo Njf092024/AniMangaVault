@@ -1,3 +1,9 @@
+namespace AniMangaVault.Services
+{
+using AniMangaVault.Models;
+using Spectre.Console;
+
+
 public class AnimeMangaService
 {
     private List<AnimeMangaItem> items = new List<AnimeMangaItem>();
@@ -46,4 +52,5 @@ public class AnimeMangaService
             AnsiConsole.MarkupLine("[red]Item not found.[/]");
         }
     }
+}
 }
