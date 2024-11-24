@@ -33,4 +33,17 @@ public class AnimeMangaService
             AnsiConsole.MarkupLine("[red]Item not found.[/]");
         }
     }
+
+    public void DeleteAnimeMangaItem(int id)
+    {
+        var item = items.FirstOrDefault(i => i.Id == id);
+        if (item != null)
+        {
+            items.Remove(item);
+        }
+        else
+        {
+            AnsiConsole.MarkupLine("[red]Item not found.[/]");
+        }
+    }
 }
