@@ -6,4 +6,13 @@ public class AnimeMangaService
     {
         items.Add(item);
     }
+
+    public void ListAnimeMangaItems()
+    {
+        if (items.Count == 0)
+        {
+            AnsiConsole.MarkupLine("[yellow]No items available.[/]");
+            return;
+        }
+    }
 }
