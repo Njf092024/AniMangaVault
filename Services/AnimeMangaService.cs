@@ -20,4 +20,13 @@ public class AnimeMangaService
             AnsiConsole.MarkupLine($"[cyan]ID:[/] {item.Id}, [bold]{item.Title}[/], [green]Rating:[/] {item.Rating}, [blue]Type:[/] [item.Type]");
         }
     }
+
+    public void UpdateRating(int id, int newRating)
+    {
+        var item = items.FirstOrDefault(i => i.Id == id);
+        if (item != null)
+        {
+            item.Rating = newRating;
+        }
+    }
 }
