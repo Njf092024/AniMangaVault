@@ -4,6 +4,7 @@ using static System.Console;
 using System.Collections.Generic;
 using System.Linq;
 using Spectre.Console;
+using AniMangaVault.Services;
 
 class Program
 {
@@ -25,17 +26,17 @@ class Program
 
             switch (selectedOption)
             {
-                case "Add New Anime/Manga":
+                case "Add new Anime/Manga":
                 AddNewAnimeMangaItems(service, ref idCounter);
                 break;
-                case "List All Anime/Manga":
-                ListAnimeMangaItems(service, ref idCounter);
+                case "List all Anime/Manga":
+                ListAnimeMangaItems(service);
                 break;
                 case "Update Rating":
-                UpdateAnimeMangaRating(service, ref idCounter);
+                UpdateAnimeMangaRating(service);
                 break;
                 case "Delete Anime/Manga":
-                DeleteAnimeMangaItem(service, ref idCounter);
+                DeleteAnimeMangaItem(service);
                 break;
                 case "Exit":
                 exit = true;
