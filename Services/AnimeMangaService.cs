@@ -28,5 +28,9 @@ public class AnimeMangaService
         {
             item.Rating = newRating;
         }
+        else
+        {
+            AnsiConsole.MarkupLine("[red]Item not found.[/]");
+        }
     }
 }
