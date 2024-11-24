@@ -14,5 +14,10 @@ public class AnimeMangaService
             AnsiConsole.MarkupLine("[yellow]No items available.[/]");
             return;
         }
+
+        foreach (var item in items)
+        {
+            AnsiConsole.MarkupLine($"[cyan]ID:[/] {item.Id}, [bold]{item.Title}[/], [green]Rating:[/] {item.Rating}, [blue]Type:[/] [item.Type]");
+        }
     }
 }
