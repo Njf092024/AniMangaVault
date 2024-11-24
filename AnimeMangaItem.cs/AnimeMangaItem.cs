@@ -1,3 +1,5 @@
+namespace AniMangaVault
+{
 public class AnimeMangaItem
 {
     public int Id { get; set; }
@@ -7,4 +9,5 @@ public class AnimeMangaItem
     public int Rating { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public string Notes { get; set; }
+}
 }

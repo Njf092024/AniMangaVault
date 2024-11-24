@@ -3,3 +3,4 @@ C:\Koding\AniMangaVault\obj\Debug\net8.0\AniMangaVault.AssemblyInfoInputs.cache
 C:\Koding\AniMangaVault\obj\Debug\net8.0\AniMangaVault.AssemblyInfo.cs
 C:\Koding\AniMangaVault\obj\Debug\net8.0\AniMangaVault.csproj.CoreCompileInputs.cache
 C:\Koding\AniMangaVault\obj\Debug\net8.0\AniMangaVault.sourcelink.json
+C:\Koding\AniMangaVault\obj\Debug\net8.0\AniMangaVault.csproj.AssemblyReference.cache
