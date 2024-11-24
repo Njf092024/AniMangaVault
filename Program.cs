@@ -52,8 +52,8 @@ class Program
         string title = AnsiConsole.Ask<string>("Enter the title: ");
         string type = AnsiConsole.Ask<string>("Enter type (Anime/Manga): ");
         string description = AnsiConsole.Ask<string>("Enter description: ");
-        int rating = AnsiConsole.ask<string>("Enter rating (1-6): ");
-        string notes = AnsiConsole.ask<string>(" Enter notes: ");
+        int rating = AnsiConsole.Ask<int>("Enter rating (1-6): ");
+        string notes = AnsiConsole.Ask<string>(" Enter notes: ");
 
         var newItem = new AnimeMangaItem
         {
