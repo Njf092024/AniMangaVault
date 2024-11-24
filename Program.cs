@@ -65,7 +65,7 @@ class Program
             Notes = notes, 
         };
 
-        service.AddNewAnimeMangaItem(newItem);
+        service.AddAnimeMangaItem(newItem);
 
         AnsiConsole.MarkupLine("[Green]Anime/Manga added sucessfully![/]");
         AnsiConsole.MarkupLine("Press any key to return to the main menu...");
@@ -105,6 +105,6 @@ class Program
 
         AnsiConsole.MarkupLine("[green]Item deleted successfully![/]");
         AnsiConsole.MarkupLine("Press any key to return to the main menu...");
-        Console.Readkey();
+        Console.ReadKey();
     }
 }
