@@ -97,5 +97,10 @@ public class AnimeMangaService
             idCounter = 1;
         }
     }
+    else 
+    {
+        items = new List<AnimeMangaItem>();
+        idCounter = 1;
+    }
 }
 }
