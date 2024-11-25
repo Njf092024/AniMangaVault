@@ -63,5 +63,10 @@ public class AnimeMangaService
             AnsiConsole.MarkupLine("[red]Item not found.[/]");
         }
     }
+    private void SaveData()
+    {
+        var json = JsonConvert.SerializeObject(items, Formatting.Indented);
+        File.WriteAllText(FileName, json);
+    }
 }
 }
