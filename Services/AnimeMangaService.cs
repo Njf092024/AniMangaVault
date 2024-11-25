@@ -5,6 +5,7 @@ using Spectre.Console;
 using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 
 public class AnimeMangaService
@@ -86,7 +87,7 @@ public class AnimeMangaService
             var json = File.ReadAllText(FileName);
             var data = JsonConvert.DeserializeObject<dynamic>(json);
 
-            if (data is Object)
+            if (data is JObject)
             {
             items = data?.items.ToObject<List<AnimeMangaItem>>() ?? new List<AnimeMangaItem>();
             idCounter = data?.idCounter ?? 1;
@@ -102,5 +103,6 @@ public class AnimeMangaService
         items = new List<AnimeMangaItem>();
         idCounter = 1;
     }
+}
 }
 }
