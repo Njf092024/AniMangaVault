@@ -7,5 +7,14 @@
     "Rating": 6,
     "CreatedAt": "2024-11-25T09:47:00.0443072+01:00",
     "Notes": "Fadi's favoritt serie"
+  },
+  {
+    "Id": 1,
+    "Title": "Durarara!",
+    "Type": "Comedy",
+    "Description": "your mum",
+    "Rating": 4,
+    "CreatedAt": "2024-11-25T09:51:14.429649+01:00",
+    "Notes": "Rødhette er redd for ulven"
   }
 ]

@@ -11,6 +11,7 @@ public class AnimeMangaService
 {
     private List<AnimeMangaItem> items = new List<AnimeMangaItem>();
     private const string FileName = "animeMangaData.json";
+    private int idCounter = 1;
 
     public AnimeMangaService()
     {
