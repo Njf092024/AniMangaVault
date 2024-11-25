@@ -73,8 +73,9 @@ public class AnimeMangaService
         {
             items = items,
             idCounter = idCounter
-        }
-        var json = JsonConvert.SerializeObject(new { items, idCounter }, Formatting.Indented);
+        };
+
+        var json = JsonConvert.SerializeObject(data, Formatting.Indented);
         File.WriteAllText(FileName, json);
     }
 
@@ -84,7 +85,10 @@ public class AnimeMangaService
         {
             var json = File.ReadAllText(FileName);
             var data = JsonConvert.DeserializeObject<dynamic>(json);
-            items = JsonConvert.DeserializeObject<List<AnimeMangaItem>>(json) ?? new List<AnimeMangaItem>();
+
+            if (data is Object)
+
+            items = data?.items.ToObject<List<AnimeMangaItem>>() ?? new List<AnimeMangaItem>();
             idCounter = data?.idCounter ?? 1;
         }
     }
