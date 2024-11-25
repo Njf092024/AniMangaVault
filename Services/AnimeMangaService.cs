@@ -78,7 +78,9 @@ public class AnimeMangaService
         if (File.Exists(FileName))
         {
             var json = File.ReadAllText(FileName);
+            var data = JsonConvert.DeserializeObject<dynamic>(json);
             items = JsonConvert.DeserializeObject<List<AnimeMangaItem>>(json) ?? new List<AnimeMangaItem>();
+            idCounter = data?.idCounter ?? 1;
         }
     }
 }
