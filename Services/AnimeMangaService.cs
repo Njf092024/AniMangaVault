@@ -42,6 +42,7 @@ public class AnimeMangaService
         if (item != null)
         {
             item.Rating = newRating;
+            SaveData();
         }
         else
         {
