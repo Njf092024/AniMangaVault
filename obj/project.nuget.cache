@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HJaB7/EXy9Q=",
+  "dgSpecHash": "/TDOOYlJH0M=",
   "success": true,
   "projectFilePath": "C:\\Koding\\AniMangaVault\\AniMangaVault.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\fadin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\fadin\\.nuget\\packages\\spectre.console\\0.49.1\\spectre.console.0.49.1.nupkg.sha512"
   ],
   "logs": []

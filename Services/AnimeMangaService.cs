@@ -2,6 +2,7 @@ namespace AniMangaVault.Services
 {
 using AniMangaVault.Models;
 using Spectre.Console;
+using System.IO;
 
 
 public class AnimeMangaService
@@ -23,7 +24,7 @@ public class AnimeMangaService
 
         foreach (var item in items)
         {
-            AnsiConsole.MarkupLine($"[cyan]ID:[/] {item.Id}, [bold]{item.Title}[/], [green]Rating:[/] {item.Rating}, [blue]Type:[/] [item.Type]");
+            AnsiConsole.MarkupLine($"[cyan]ID:[/] {item.Id}, [bold]{item.Title}[/], [green]Rating:[/] {item.Rating}, [blue]Type:[/] {item.Type}");
         }
     }
 
