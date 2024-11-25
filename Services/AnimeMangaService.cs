@@ -3,6 +3,7 @@ namespace AniMangaVault.Services
 using AniMangaVault.Models;
 using Spectre.Console;
 using System.IO;
+using System.Linq;
 
 
 public class AnimeMangaService
