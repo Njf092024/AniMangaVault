@@ -20,6 +20,7 @@ public class AnimeMangaService
 
     public void AddNewAnimeMangaItem(AnimeMangaItem item)
     {
+        item.Id = idCounter++;
         items.Add(item);
         SaveData();
     }
