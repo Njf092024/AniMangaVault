@@ -69,6 +69,11 @@ public class AnimeMangaService
 
     private void SaveData()
     {
+        var data = new
+        {
+            items = items,
+            idCounter = idCounter
+        }
         var json = JsonConvert.SerializeObject(new { items, idCounter }, Formatting.Indented);
         File.WriteAllText(FileName, json);
     }
