@@ -87,9 +87,14 @@ public class AnimeMangaService
             var data = JsonConvert.DeserializeObject<dynamic>(json);
 
             if (data is Object)
-
+            {
             items = data?.items.ToObject<List<AnimeMangaItem>>() ?? new List<AnimeMangaItem>();
             idCounter = data?.idCounter ?? 1;
+        }
+        else
+        {
+            items = new List<AnimeMangaItem>();
+            idCounter = 1;
         }
     }
 }
