@@ -19,6 +19,7 @@ public class AnimeMangaService
     public void AddNewAnimeMangaItem(AnimeMangaItem item)
     {
         items.Add(item);
+        SaveData();
     }
 
     public void ListAnimeMangaItems()
