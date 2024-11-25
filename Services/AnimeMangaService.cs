@@ -4,6 +4,7 @@ using AniMangaVault.Models;
 using Spectre.Console;
 using System.IO;
 using System.Linq;
+using Newtonsoft.Json;
 
 
 public class AnimeMangaService

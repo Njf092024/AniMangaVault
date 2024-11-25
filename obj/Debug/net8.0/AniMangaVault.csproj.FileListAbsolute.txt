@@ -3,6 +3,7 @@ C:\Koding\AniMangaVault\bin\Debug\net8.0\AniMangaVault.deps.json
 C:\Koding\AniMangaVault\bin\Debug\net8.0\AniMangaVault.runtimeconfig.json
 C:\Koding\AniMangaVault\bin\Debug\net8.0\AniMangaVault.dll
 C:\Koding\AniMangaVault\bin\Debug\net8.0\AniMangaVault.pdb
+C:\Koding\AniMangaVault\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Koding\AniMangaVault\bin\Debug\net8.0\Spectre.Console.dll
 C:\Koding\AniMangaVault\obj\Debug\net8.0\AniMangaVault.csproj.AssemblyReference.cache
 C:\Koding\AniMangaVault\obj\Debug\net8.0\AniMangaVault.GeneratedMSBuildEditorConfig.editorconfig
@@ -16,4 +17,3 @@ C:\Koding\AniMangaVault\obj\Debug\net8.0\refint\AniMangaVault.dll
 C:\Koding\AniMangaVault\obj\Debug\net8.0\AniMangaVault.pdb
 C:\Koding\AniMangaVault\obj\Debug\net8.0\AniMangaVault.genruntimeconfig.cache
 C:\Koding\AniMangaVault\obj\Debug\net8.0\ref\AniMangaVault.dll
-C:\Koding\AniMangaVault\bin\Debug\net8.0\Newtonsoft.Json.dll
