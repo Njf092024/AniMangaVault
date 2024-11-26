@@ -26,7 +26,16 @@
       "Rating": 6,
       "CreatedAt": "2024-11-25T10:55:12.0972752+01:00",
       "Notes": "Anders, det er 2 VNs ute på Steam."
+    },
+    {
+      "Id": 4,
+      "Title": "uwu",
+      "Type": "uwu",
+      "Description": "uwu",
+      "Rating": 1,
+      "CreatedAt": "2024-11-26T14:25:45.3515211+01:00",
+      "Notes": "uwu"
     }
   ],
-  "idCounter": 7
+  "idCounter": 5
 }

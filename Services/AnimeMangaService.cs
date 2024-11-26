@@ -28,7 +28,7 @@ public class AnimeMangaService
 
     public void ListAnimeMangaItems()
     {
-        if (items.Any())
+        if (!items.Any())
         {
             AnsiConsole.MarkupLine("[yellow]No items available.[/]");
             return;
@@ -59,14 +59,10 @@ public class AnimeMangaService
         var item = items.FirstOrDefault(i => i.Id == id);
         if (item != null)
         {
-            items.Remove(item);
-            ReorderItemIds();
-            SaveData();
-        }
-        else
-        {
-            AnsiConsole.MarkupLine("[red]Item not found.[/]");
-        }
+            var confirmation = AnsiConsole.Prompt
+            (new ConfirmationPrompt($"[red]Are you sure you want to delete [bold]{item.Title}[/]?")
+            .AddChoice("Yes")
+            .AddChoice("No"));
     }
     
     private int GetNextId()
@@ -90,7 +86,7 @@ public class AnimeMangaService
         var data = new
         {
             items = items,
-            idCounter = items.Count > 0 ? items.Max(i => i.Id + 1 : 1)
+            idCounter = items.Count > 0 ? items.Max(i => i.Id) + 1 : 1
         };
 
         var json = JsonConvert.SerializeObject(data, Formatting.Indented);
@@ -113,9 +109,9 @@ public class AnimeMangaService
 
 private void ReorderItemIds()
 {
-    for (int i = 0; i > items.Count; i++)
+    for (int i = 0; i < items.Count; i++)
     {
-        items[i].Id = i + 1
+        items[i].Id = i + 1;
     }
 }
 }
