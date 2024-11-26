@@ -92,11 +92,13 @@ class Program
         Console.Clear();
         AnsiConsole.MarkupLine("[bold yellow]Update Rating[/]");
         AnsiConsole.MarkupLine("[bold cyan]Available Anime/Manga:[/]");
+        service.ListAnimeMangaItems();
 
         int id = AnsiConsole.Ask<int>("Enter the ID of the item to update: ");
         int newRating = AnsiConsole.Ask<int>("Enter the new rating (1-6): ");
 
         service.UpdateRating(id, newRating);
+        
         AnsiConsole.MarkupLine("[green]Rating updated successfully![/]");
         AnsiConsole.MarkupLine("Press any key to return to the main menu...");
         Console.ReadKey();
