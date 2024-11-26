@@ -68,6 +68,7 @@ public class AnimeMangaService
             AnsiConsole.MarkupLine("[red]Item not found.[/]");
         }
     }
+    
 
     public bool HasItems()
     {
