@@ -21,14 +21,14 @@ public class AnimeMangaService
 
     public void AddNewAnimeMangaItem(AnimeMangaItem item)
     {
-        item.Id = idCounter++;
+        item.Id = GetNextId();
         items.Add(item);
         SaveData();
     }
 
     public void ListAnimeMangaItems()
     {
-        if (items.Count == 0)
+        if (items.Any())
         {
             AnsiConsole.MarkupLine("[yellow]No items available.[/]");
             return;
@@ -60,6 +60,7 @@ public class AnimeMangaService
         if (item != null)
         {
             items.Remove(item);
+            ReorderItemIds();
             SaveData();
         }
         else
