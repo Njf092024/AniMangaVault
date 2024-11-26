@@ -68,6 +68,11 @@ public class AnimeMangaService
         }
     }
 
+    public bool HasItems()
+    {
+        return items.Any();
+    }
+
     private void SaveData()
     {
         var data = new
