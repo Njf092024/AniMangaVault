@@ -103,6 +103,8 @@ class Program
         .Select(item => $"{item.Id}: {item.Title} [Type: {item.Type}, Rating: {item.Rating}]")
         .ToList();
 
+        var escapedOptions = options.Select(option => option.Replace("[", "[[").Replace("]", "]]")).ToList();
+
         var selectedOption = AnsiConsole.Prompt
         (new SelectionPrompt<string>()
         .Title("[cyan]Select the Anime/Manga you want to update:[/]")
@@ -111,7 +113,7 @@ class Program
         
 
         int id = int.Parse(selectedOption.Split(':')[0]);
-        
+
         int newRating = AnsiConsole.Ask<int>("Enter the new rating (1-6): ");
 
         service.UpdateRating(id, newRating);
