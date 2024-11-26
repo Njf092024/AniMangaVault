@@ -140,6 +140,12 @@ class Program
         .ToList();
 
         var escapedOptions = options.Select(option => option.Replace("[", "[[").Replace("]", "]]")).ToList();
+
+        var selectedOption = AnsiConsole.Prompt(new SelectionPrompt<string>()
+        .Title("[cyan]Select the Anime/Manga you want to delete:[/]")
+        .PageSize(10)
+        .AddChoices(escapedOptions));
+        
         int id = AnsiConsole.Ask<int>("Enter the ID of the item to delete: ");
         service.DeleteAnimeMangaItem(id);
 
