@@ -102,6 +102,12 @@ class Program
         var options = service.GetAnimeMangaItems()
         .Select(item => $"{item.Id}: {item.Title} [Type: {item.Type}, Rating: {item.Rating}]")
         .ToList();
+
+        var selectedOption = AnsiConsole.Prompt
+        (new SelectionPrompt<string>()
+        .Title("[cyan]Select the Anime/Manga you want to update:[/]")
+        .PageSize(10)
+        .AddChoices (options));
         service.ListAnimeMangaItems();
 
         int id = AnsiConsole.Ask<int>("Enter the ID of the item to update: ");
