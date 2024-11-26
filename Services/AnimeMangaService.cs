@@ -1,5 +1,5 @@
-namespace AniMangaVault.Services
-{
+namespace AniMangaVault.Services;
+
 using AniMangaVault.Models;
 using Spectre.Console;
 using System.IO;
@@ -7,16 +7,19 @@ using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-
 public class AnimeMangaService
 {
     private List<AnimeMangaItem> items = new List<AnimeMangaItem>();
     private const string FileName = "animeMangaData.json";
-    private int idCounter = 1;
 
     public AnimeMangaService()
     {
         LoadData();
+    }
+
+    private int GetNextId()
+    {
+        return items.Any() ? items.Max(item => item.Id) + 1 : 1;
     }
 
     public void AddNewAnimeMangaItem(AnimeMangaItem item)
@@ -59,34 +62,23 @@ public class AnimeMangaService
         var item = items.FirstOrDefault(i => i.Id == id);
         if (item != null)
         {
-            var confirmation = AnsiConsole.Prompt
-            (new ConfirmationPrompt($"[red]Are you sure you want to delete [bold]{item.Title}[/]?")
-            .AddChoice("Yes")
-            .AddChoice("No"));
-
-            if (confirmation)
-            {
-                items.Remove(item);
-                ReorderItemIds();
-                SaveData();
-                AnsiConsole.MarkupLine("[green]Item deleted succesfully![/]");
-            }
-            else
-            {
-                AnsiConsole.MarkupLine("[yellow]Deletion canceled.[/]");
-            }
-    }
-    else
-    {
-        AnsiConsole.MarkupLine("[red]Item not fuond.[/]");
+            items.Remove(item);
+            ReorderItemIds();
+            SaveData();
+            AnsiConsole.MarkupLine("[green]Item deleted successfully![/]");
+        }
+        else
+        {
+            AnsiConsole.MarkupLine("[red]Item not found.[/]");
+        }
     }
 
-    AnsiConsole.MarkupLine("Press any key to return to the main menu...");
-    Console.ReadKey();
-    
-    private int GetNextId()
+    private void ReorderItemIds()
     {
-        return items.Any() ? items.Max(item => item.Id) + 1 : 1;
+        for (int i = 0; i < items.Count; i++)
+        {
+            items[i].Id = i + 1;
+        }
     }
 
     public bool HasItems()
@@ -99,15 +91,9 @@ public class AnimeMangaService
         return items;
     }
 
-
     private void SaveData()
     {
-        var data = new
-        {
-            items = items,
-            idCounter = items.Count > 0 ? items.Max(i => i.Id) + 1 : 1
-        };
-
+        var data = new { items = items };
         var json = JsonConvert.SerializeObject(data, Formatting.Indented);
         File.WriteAllText(FileName, json);
     }
@@ -121,17 +107,8 @@ public class AnimeMangaService
 
             if (data is JObject)
             {
-            items = data?.items.ToObject<List<AnimeMangaItem>>() ?? new List<AnimeMangaItem>();
-        }       
+                items = data?.items.ToObject<List<AnimeMangaItem>>() ?? new List<AnimeMangaItem>();
+            }
+        }
     }
-}
-
-private void ReorderItemIds()
-{
-    for (int i = 0; i < items.Count; i++)
-    {
-        items[i].Id = i + 1;
-    }
-}
-}
 }
