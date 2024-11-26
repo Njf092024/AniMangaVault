@@ -105,11 +105,10 @@ class Program
 
         var escapedOptions = options.Select(option => option.Replace("[", "[[").Replace("]", "]]")).ToList();
 
-        var selectedOption = AnsiConsole.Prompt
-        (new SelectionPrompt<string>()
+        var selectedOption = AnsiConsole.Prompt(new SelectionPrompt<string>()
         .Title("[cyan]Select the Anime/Manga you want to update:[/]")
         .PageSize(10)
-        .AddChoices (options));
+        .AddChoices (escapedOptions));
         
 
         int id = int.Parse(selectedOption.Split(':')[0]);
@@ -127,6 +126,8 @@ class Program
     {
         Console.Clear();
         AnsiConsole.MarkupLine("[bold red]Delete Anime/Manga[/]");
+
+        if (!service.HasItems())
         int id = AnsiConsole.Ask<int>("Enter the ID of the item to delete: ");
         service.DeleteAnimeMangaItem(id);
 
