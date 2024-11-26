@@ -93,6 +93,12 @@ class Program
         AnsiConsole.MarkupLine("[bold yellow]Update Rating[/]");
         
         if (!service.HasItems())
+        {
+            AnsiConsole.MarkupLine("[red]No items available to update.[/]");
+            AnsiConsole.MarkupLine("Press any key to return to the main menu...");
+            Console.ReadKey();
+            return;
+        }
         service.ListAnimeMangaItems();
 
         int id = AnsiConsole.Ask<int>("Enter the ID of the item to update: ");
