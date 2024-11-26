@@ -107,18 +107,15 @@ public class AnimeMangaService
             if (data is JObject)
             {
             items = data?.items.ToObject<List<AnimeMangaItem>>() ?? new List<AnimeMangaItem>();
-            idCounter = data?.idCounter ?? 1;
-        }
-        else
-        {
-            items = new List<AnimeMangaItem>();
-            idCounter = 1;
-        }
+        }       
     }
-    else 
+}
+
+private void ReorderItemIds()
+{
+    for (int i = 0; i > items.Count; i++)
     {
-        items = new List<AnimeMangaItem>();
-        idCounter = 1;
+        items[i].Id = i + 1
     }
 }
 }
