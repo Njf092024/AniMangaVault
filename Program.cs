@@ -99,6 +99,9 @@ class Program
             Console.ReadKey();
             return;
         }
+        var options = service.GetAnimeMangaItems()
+        .Select(item => $"{item.Id}: {item.Title} [Type: {item.Type}, Rating: {item.Rating}]")
+        .ToList();
         service.ListAnimeMangaItems();
 
         int id = AnsiConsole.Ask<int>("Enter the ID of the item to update: ");
