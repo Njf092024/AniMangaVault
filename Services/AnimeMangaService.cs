@@ -90,7 +90,7 @@ public class AnimeMangaService
         var data = new
         {
             items = items,
-            idCounter = idCounter
+            idCounter = items.Count > 0 ? items.Max(i => i.Id + 1 : 1)
         };
 
         var json = JsonConvert.SerializeObject(data, Formatting.Indented);
