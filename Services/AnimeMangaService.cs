@@ -73,6 +73,12 @@ public class AnimeMangaService
         return items.Any();
     }
 
+    public List<AnimeMangaItem> GetAnimeMangaItems()
+    {
+        return items;
+    }
+
+
     private void SaveData()
     {
         var data = new
