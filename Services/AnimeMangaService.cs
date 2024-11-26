@@ -69,6 +69,10 @@ public class AnimeMangaService
         }
     }
     
+    private int GetNextId()
+    {
+        return items.Any() ? items.Max(item => item.Id) + 1 : 1;
+    }
 
     public bool HasItems()
     {
