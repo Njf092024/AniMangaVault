@@ -108,7 +108,7 @@ class Program
         .Title("[cyan]Select the Anime/Manga you want to update:[/]")
         .PageSize(10)
         .AddChoices (options));
-        service.ListAnimeMangaItems();
+        
 
         int id = AnsiConsole.Ask<int>("Enter the ID of the item to update: ");
         int newRating = AnsiConsole.Ask<int>("Enter the new rating (1-6): ");
