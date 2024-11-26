@@ -63,7 +63,26 @@ public class AnimeMangaService
             (new ConfirmationPrompt($"[red]Are you sure you want to delete [bold]{item.Title}[/]?")
             .AddChoice("Yes")
             .AddChoice("No"));
+
+            if (confirmation)
+            {
+                items.Remove(item);
+                ReorderItemIds();
+                SaveData();
+                AnsiConsole.MarkupLine("[green]Item deleted succesfully![/]");
+            }
+            else
+            {
+                AnsiConsole.MarkupLine("[yellow]Deletion canceled.[/]");
+            }
     }
+    else
+    {
+        AnsiConsole.MarkupLine("[red]Item not fuond.[/]");
+    }
+
+    AnsiConsole.MarkupLine("Press any key to return to the main menu...");
+    Console.ReadKey();
     
     private int GetNextId()
     {
