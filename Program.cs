@@ -131,4 +131,13 @@ class Program
         AnsiConsole.MarkupLine("Press any key to return to the main menu...");
         Console.ReadKey();
     }
+    var builder = WebApplication.CreateBuilder(args);
+    builder.Services.AddControllers();
+    
+    var app = builder.Build();
+
+    app.UseStaticFiles();
+    app.MapControllers();
+
+    app.Run();
 }

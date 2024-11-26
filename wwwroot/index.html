@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniMangaVault</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>AniMangaVault</h1>
+    <h2>Add New Item</h2>
+    <form onsubmit="addAnimeMangaItem(); return false";>
+        <input id="title" type="text" placeholder="Title" required />
+        <input id="type" type="text" placeholder="Type (Anime/Manga)" required />
+        <textarea id="description" placeholder="description"><</textarea>
+        <input id="rating" type="number" placeholder="rating (1-6)" required min="1" max="6" />
+        <button type="submit">Add</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
