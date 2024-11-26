@@ -1,20 +1,32 @@
-[
-  {
-    "Id": 1,
-    "Title": "Log Horizon",
-    "Type": "Anime",
-    "Description": "Log Horizon is centered on players trapped in the MMORPG Elder Tale after a mysterious event. Led by the strategist Shiroe, they adapt to their new reality, navigating in-game politics, survival challenges, and forming alliances to reshape society. The series explores themes of strategy, community, and the blurred lines between virtual and real-world experiences.",
-    "Rating": 6,
-    "CreatedAt": "2024-11-25T09:47:00.0443072+01:00",
-    "Notes": "Fadi's favoritt serie"
-  },
-  {
-    "Id": 1,
-    "Title": "Durarara!",
-    "Type": "Comedy",
-    "Description": "your mum",
-    "Rating": 4,
-    "CreatedAt": "2024-11-25T09:51:14.429649+01:00",
-    "Notes": "Rødhette er redd for ulven"
-  }
-]
+{
+  "items": [
+    {
+      "Id": 1,
+      "Title": "Log Horizon",
+      "Type": "Anime",
+      "Description": "Log Horizon is centered on players trapped in the MMORPG Elder Tale after a mysterious event. Led by the strategist Shiroe, they adapt to their new reality, navigating in-game politics, survival challenges, and forming alliances to reshape society.",
+      "Rating": 6,
+      "CreatedAt": "2024-11-25T10:37:39.4263869+01:00",
+      "Notes": "Fadi's favoritt sere"
+    },
+    {
+      "Id": 2,
+      "Title": "Mirai nikki",
+      "Type": "Anime",
+      "Description": ".",
+      "Rating": 6,
+      "CreatedAt": "2024-11-25T10:40:15.8330088+01:00",
+      "Notes": "Oliver, sikkert ikke favoritten hans men ..."
+    },
+    {
+      "Id": 3,
+      "Title": "Clannad",
+      "Type": "Anime/VN",
+      "Description": "Clannad is a heartwarming anime about Tomoya Okazaki, a high school delinquent whose life changes when he meets the shy Nagisa Furukawa. ",
+      "Rating": 6,
+      "CreatedAt": "2024-11-25T10:55:12.0972752+01:00",
+      "Notes": "Anders, det er 2 VNs ute på Steam."
+    }
+  ],
+  "idCounter": 5
+}

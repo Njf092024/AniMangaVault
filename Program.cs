@@ -3,7 +3,7 @@ using System;
 using static System.Console;
 using System.Collections.Generic;
 using System.Linq;
-using Spectre.Console;
+using Spectre.Console; 
 using AniMangaVault;
 using AniMangaVault.Services;
 using AniMangaVault.Models;
@@ -91,6 +91,7 @@ class Program
     {
         Console.Clear();
         AnsiConsole.MarkupLine("[bold yellow]Update Rating[/]");
+        AnsiConsole.MarkupLine("[bold cyan]Available Anime/Manga:[/]");
 
         int id = AnsiConsole.Ask<int>("Enter the ID of the item to update: ");
         int newRating = AnsiConsole.Ask<int>("Enter the new rating (1-6): ");
