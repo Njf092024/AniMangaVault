@@ -128,6 +128,12 @@ class Program
         AnsiConsole.MarkupLine("[bold red]Delete Anime/Manga[/]");
 
         if (!service.HasItems())
+        {
+            AnsiConsole.MarkupLine("[red]No items available to delete.[/]");
+            AnsiConsole.MarkupLine("Press any key to return to the main menu...");
+            Console.ReadKey();
+            return;
+        }
         int id = AnsiConsole.Ask<int>("Enter the ID of the item to delete: ");
         service.DeleteAnimeMangaItem(id);
 
