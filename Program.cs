@@ -139,7 +139,7 @@ class Program
         .Select(item => $"{item.Id}: {item.Title} [Type: {item.Type}, Rating: {item.Rating}]")
         .ToList();
 
-        
+        var escapedOptions = options.Select(option => option.Replace("[", "[[").Replace("]", "]]")).ToList();
         int id = AnsiConsole.Ask<int>("Enter the ID of the item to delete: ");
         service.DeleteAnimeMangaItem(id);
 
