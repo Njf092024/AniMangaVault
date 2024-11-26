@@ -110,7 +110,7 @@ class Program
         .AddChoices (options));
         
 
-        int id = AnsiConsole.Ask<int>("Enter the ID of the item to update: ");
+        int id = int.Parse(selectedOption.Split(':')[0]);
         int newRating = AnsiConsole.Ask<int>("Enter the new rating (1-6): ");
 
         service.UpdateRating(id, newRating);
